@@ -29,7 +29,15 @@ https://www.curseforge.com/minecraft/mc-mods/draconic-evolution-render-patcher
 ・ダウンロードしたluaファイルを、computercraftフォルダ内にあるコンピューターのIDのフォルダにluaを直接コピーしてください。
 （例：AlltheMods10ATM10\saves\ワールド名\computercraft\computer\コンピューターのID）
 　コンピューターのIDのフォルダは、editコマンドで何か適当にファイルを保存すると作成されます。
-・wgetコマンドを使ってgithubからダウンロードしてください。
+・特にインターネット接続に制限がない場合は、wgetコマンドを使ってgithubからダウンロードしてください。
+　外部（モニタリング用）PC
+　wget https://raw.githubusercontent.com/gmiz42/ATM10-cc-tweaked-Draconic-Evolition-Reactor-Monitoring-System/main/install_outside.lua install.lua
+install
+　内部（情報収集・送信用）PC
+　wget https://raw.githubusercontent.com/gmiz42/ATM10-cc-tweaked-Draconic-Evolition-Reactor-Monitoring-System/main/install_inside.lua install.lua
+install
+　ダウンロード後、各PCの画面から install を実行。
+
 ・ダウンロードしたファイルを現実のPCにあるcc:tweakedディスクドライブ用フォルダにコピーし、（例：.minecraft/saves/.../disk/ID/）
 　ディスクドライブを使い、コンピューターのfsコマンドでコピーしてください。
 参考：https://tweaked.cc/module/fs.html

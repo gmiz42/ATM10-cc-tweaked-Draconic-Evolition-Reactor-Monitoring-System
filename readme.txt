@@ -7,10 +7,10 @@ All The Mods 10 (ATM10) v6.2.1, implemented using CC:Tweaked.
 
 The system focuses on safe, real‑time monitoring, offering:
 
-	Graphical UI (bar graphs + multi‑line charts)
-	Recommended output estimation
-	Remaining operation time prediction
-	Maximum safe output estimation
+  Graphical UI (bar graphs + multi‑line charts)
+  Recommended output estimation
+  Remaining operation time prediction
+  Maximum safe output estimation
 Safe / Aggressive mode switching
 
 This version (v1) is monitoring‑only.
@@ -36,6 +36,14 @@ There are three supported installation methods:
 
   B. Download via wget
   Use CC:Tweaked’s wget command to download files directly from GitHub.
+  Outside PC
+  wget https://raw.githubusercontent.com/gmiz42/ATM10-cc-tweaked-Draconic-Evolition-Reactor-Monitoring-System/main/install_outside.lua install.lua
+  install
+  
+  Inside PC
+  wget https://raw.githubusercontent.com/gmiz42/ATM10-cc-tweaked-Draconic-Evolition-Reactor-Monitoring-System/main/install_inside.lua install.lua
+  install
+  
 
   C. Floppy disk transfer
   Copy the .lua files into the disk directory on your real PC:
