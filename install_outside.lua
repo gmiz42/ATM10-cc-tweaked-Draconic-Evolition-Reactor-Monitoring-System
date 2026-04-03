@@ -3,7 +3,7 @@ local base = "https://raw.githubusercontent.com/gmiz42/ATM10-cc-tweaked-Draconic
 
 local files = {
     { base .. "outside/monitor.lua", "monitor.lua" },
-    { base .. "outside/config_monitor.lua", "config_monitor.lua" },
+    { base .. "outside/config_outside.lua", "config_outside.lua" },
 }
 
 for _, f in ipairs(files) do
