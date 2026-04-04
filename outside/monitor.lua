@@ -263,7 +263,7 @@ while true do
 			if secondsRemain < 3600 then 
 				local now = os.epoch("utc") / 1000 
 				if now - lastAlertTime > config.alertInterval then
-					commands.say(string.format(
+					commands.tell("@a",string.format(
 						"⚠ Reactor fuel low: %dm remaining",
 						math.floor(secondsRemain / 60)
 					))
