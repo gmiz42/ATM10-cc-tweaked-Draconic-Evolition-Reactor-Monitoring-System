@@ -300,7 +300,7 @@ while true do
 			local satCriticalMargin = math.min(satUpperMargin, satLowerMargin)
 
 			-- 温度の余裕
-			local tempMargin = (config.safeTempLimit - data.info.temperature) / config.safeTempLimit 
+			local tempMargin = (tempLimit - data.info.temperature) / tempLimit 
 			if tempMargin < 0 then tempMargin = 0 end
 
 			-- 総合した要求出力の余裕
@@ -323,8 +323,8 @@ while true do
 			-- ★　温度の上昇・飽和度の下降は、変更した出力要求に耐えられたら上昇を始めるので別の角度からも判断する
 			-- 温度危険域評価
 			local tempDanger = 0 
-			if data.info.temperature > 7200 then  -- 7200度
-				tempDanger = (data.info.temperature - 7200) / 8000  -- 0-0.1程度
+			if data.info.temperature > tempLimit * 0.9 then  -- 90%
+				tempDanger = (data.info.temperature - tempLimit * 0.9 ) / tempLimit  -- 0-0.1程度
 			end
 
 			local satDanger = 0 
@@ -338,8 +338,8 @@ while true do
 			-- マージンの危険域評価
 			local dangerZoneFactor = 1.0 
 
-			-- 温度危険ゾーン 7000度以上なら 4割にする
-			if data.info.temperature >= 7000 then
+			-- 温度危険ゾーン 温度80%以上なら 4割にする
+			if data.info.temperature >= tempLimit * 0.8 then
 				dangerZoneFactor = dangerZoneFactor * 0.4
 			end
 
